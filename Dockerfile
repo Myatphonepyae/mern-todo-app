@@ -4,10 +4,8 @@ WORKDIR /app
 
 COPY . .
 
-WORKDIR /app/TODO/server
-
-RUN npm install
+RUN cd TODO && npm install
 
 EXPOSE 3000
 
-CMD ["node","server.js"]
+CMD ["node","TODO/server.js"]
